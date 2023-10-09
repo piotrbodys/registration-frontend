@@ -8,9 +8,7 @@ import Table from "./components/Table";
 function App() {
   const [events, setEvents] = useState([]);
 
-  useEffect(() => {
-    getEvents();
-  }, []);
+  
 
   const getEvents = () => {
     axios
@@ -37,6 +35,10 @@ function App() {
         });
     }
   };
+
+  useEffect(() => {
+    getEvents();
+  }, []);
 
   return (
     <div className="App">
